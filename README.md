@@ -31,22 +31,20 @@ divination-hub/
 │   └── js/
 │       ├── registry.js     # ★ 工具注册表——加新工具的唯一入口
 │       └── core.js         # 共享引擎：RNG / 64 卦 / 导航注入
-├── tools/
-│   ├── _template/          # ★ 新工具模板（复制即用）
-│   ├── meihua/             # 每个工具四件套 ↓
-│   ├── liuyao/             #   index.html  使用页
-│   ├── xiaoliuren/         #   intro.html  介绍页
-│   ├── tarot/              #   xxx.js      逻辑层
-│   ├── chouqian/           #   xxx-data.js 数据层（换数据不改代码）
-│   ├── xingming/
-│   ├── guanyin/            # 观音灵签（一百签）
-│   ├── lvzu/               # 吕祖灵签（一百签）
-│   ├── zhijiao/            # 掷筊
-│   ├── dayan/              # 大衍筮法
-│   └── shengri/            # 生日洛书九宫
-└── docs/
-    ├── 部署指南.md          # 小白也能懂的 GitHub Pages 上线教程
-    └── 添加新工具.md        # 扩展接口文档
+└── tools/
+    ├── _template/          # ★ 新工具模板（复制即用）
+    ├── meihua/             # 每个工具四件套 ↓
+    ├── liuyao/             #   index.html  使用页
+    ├── xiaoliuren/         #   intro.html  介绍页
+    ├── tarot/              #   xxx.js      逻辑层
+    ├── chouqian/           #   xxx-data.js 数据层（换数据不改代码）
+    ├── xingming/
+    ├── guanyin/            # 观音灵签（一百签）
+    ├── lvzu/               # 吕祖灵签（一百签）
+    ├── zhijiao/            # 掷筊
+    ├── dayan/              # 大衍筮法
+    └── shengri/            # 生日洛书九宫
+
 ```
 
 ## 本地预览
