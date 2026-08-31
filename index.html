@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>玄机 · Cyber Oracle — 赛博占卜工具合集</title>
+<meta name="description" content="纯前端占卜工具合集：梅花易数、六爻、小六壬、塔罗、抽签、姓名九宫。赛博极简风格，开源可扩展。">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<nav id="site-nav"></nav>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>玄<span class="x">机</span></h1>
+    <p class="sub">CYBER ORACLE // 赛博占卜工具合集 <em>·</em> 纯前端 <em>·</em> 开源可扩展</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <h2 class="sec">占卜模块 / MODULES</h2>
+  <div class="grid" id="tool-grid"></div>
+
+  <div class="note" style="margin-top:36px">
+    本站所有工具均为<b style="color:var(--cyan)">纯前端</b>实现，无后端、无数据上报，起卦结果由浏览器加密随机数当场生成。
+    内容属传统文化范畴，<b style="color:var(--amber)">仅供研究娱乐，请勿作为现实决策依据</b>。
+  </div>
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="assets/js/registry.js"></script>
+<script src="assets/js/core.js"></script>
+<script>
+(function () {
+  var grid = document.getElementById('tool-grid');
+  var html = (window.TOOL_REGISTRY || []).map(function (t) {
+    return '<a class="tool-card" href="' + t.use + '">' +
+      '<div class="ic">' + t.icon + '</div>' +
+      '<h3>' + t.name + '</h3>' +
+      '<div class="tag">' + t.en + ' · ' + t.tag + '</div>' +
+      '<p>' + t.desc + '</p>' +
+      '<div class="go">进入 →</div>' +
+      '</a>';
+  }).join('');
+  grid.innerHTML = html;
+})();
+</script>
+</body>
+</html>

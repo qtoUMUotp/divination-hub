@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>姓名九宫 — 使用 · 玄机</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-tool="xingming" data-page="use">
+<nav id="site-nav"></nav>
+
+<div class="wrap">
+  <div class="page-head">
+    <div class="crumb">XUANJI // 姓名九宫</div>
+    <h1>姓名<b>九宫</b></h1>
+    <div class="en">NAME GRID · USE</div>
+  </div>
+  <div class="page-tabs" id="page-tabs"></div>
+
+  <section class="panel">
+    <h4>输入姓名</h4>
+    <div class="form-grid" style="max-width:520px">
+      <div><label class="fl">姓氏</label><input type="text" id="f-xing" placeholder="如：李 / 欧阳" maxlength="2"></div>
+      <div><label class="fl">名字</label><input type="text" id="f-ming" placeholder="如：白 / 明轩" maxlength="2"></div>
+    </div>
+    <div class="note">笔画按<b style="color:var(--amber)">《康熙字典》姓名学口径</b>（氵按水 4 画、艹按艸 6 画、右耳旁按邑 7 画等）。生僻字会请求手动输入笔画。</div>
+    <div class="btn-row">
+      <button class="btn primary" id="go">排 盘</button>
+    </div>
+  </section>
+
+  <div id="result"></div>
+</div>
+
+<footer id="site-footer"></footer>
+<script src="../../assets/js/registry.js"></script>
+<script src="../../assets/js/core.js"></script>
+<script src="xingming-data.js"></script>
+<script src="xingming.js"></script>
+</body>
+</html>

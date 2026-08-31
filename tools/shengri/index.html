@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>生日洛书九宫 — 使用 · 玄机</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<style>
+  .ls-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 10px; max-width: 420px; margin: 18px auto 4px;
+  }
+  .ls-cell {
+    border: 1px solid var(--edge, rgba(126,147,184,.35));
+    background: rgba(46,230,255,.04);
+    padding: 10px 6px 12px; text-align: center; position: relative;
+    min-height: 92px;
+  }
+  .ls-cell.center { border-color: var(--cyan); box-shadow: 0 0 14px rgba(46,230,255,.18) inset; }
+  .ls-cell.miss { opacity: .55; border-style: dashed; }
+  .ls-no { font-size: 24px; color: var(--cyan); font-weight: 700; }
+  .ls-cell.miss .ls-no { color: var(--dim); }
+  .ls-dots { letter-spacing: 3px; color: var(--amber); font-size: 12px; min-height: 16px; }
+  .ls-mt { font-size: 11px; color: var(--dim); margin-top: 4px; line-height: 1.5; }
+  .ls-pos { position: absolute; top: 4px; left: 8px; font-size: 10px; color: var(--dim); letter-spacing: 1px; }
+</style>
+</head>
+<body data-tool="shengri" data-page="use">
+<nav id="site-nav"></nav>
+
+<div class="wrap">
+  <div class="page-head">
+    <div class="crumb">XUANJI // 生日洛书九宫</div>
+    <h1>生日<b>洛书九宫</b></h1>
+    <div class="en">LO SHU GRID · USE</div>
+  </div>
+  <div class="page-tabs" id="page-tabs"></div>
+
+  <section class="panel">
+    <h4>生辰落宫</h4>
+    <div class="note">以公历生日八位数字中 1–9 的出现次数，落入洛书九宫（4-9-2 / 3-5-7 / 8-1-6）。次数即"能量"，缺数即"课题"。</div>
+    <div class="form-grid" style="max-width:520px">
+      <div><label class="fl">生日</label>
+        <div style="display:flex;gap:10px">
+          <input type="number" id="y" min="1900" max="2100" placeholder="1990" style="width:110px">
+          <input type="number" id="m" min="1" max="12" placeholder="08" style="width:70px">
+          <input type="number" id="d" min="1" max="31" placeholder="15" style="width:70px">
+        </div>
+      </div>
+    </div>
+    <div class="btn-row">
+      <button class="btn primary" id="go">落 宫 分 析</button>
+    </div>
+  </section>
+
+  <div id="result"></div>
+</div>
+
+<footer id="site-footer"></footer>
+<script src="../../assets/js/registry.js"></script>
+<script src="../../assets/js/core.js"></script>
+<script src="shengri.js"></script>
+</body>
+</html>

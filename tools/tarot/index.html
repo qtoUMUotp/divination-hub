@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>塔罗 — 使用 · 玄机</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-tool="tarot" data-page="use">
+<nav id="site-nav"></nav>
+
+<div class="wrap">
+  <div class="page-head">
+    <div class="crumb">XUANJI // 塔罗</div>
+    <h1>塔<b>罗</b></h1>
+    <div class="en">TAROT · USE</div>
+  </div>
+  <div class="page-tabs" id="page-tabs"></div>
+
+  <section class="panel">
+    <h4>抽牌设置</h4>
+    <div class="form-grid">
+      <div><label class="fl">牌阵</label><select id="spread"></select></div>
+      <div><label class="fl">牌库</label>
+        <select id="deck">
+          <option value="all">全牌库（78 张）</option>
+          <option value="major">仅大阿卡纳（22 张）</option>
+        </select>
+      </div>
+    </div>
+    <label class="check-row" style="margin-top:14px"><input type="checkbox" id="rev" checked> 允许逆位</label>
+    <div class="note">默念问题 → 专注呼吸 → 抽牌。问题宜开放（「这段关系走向如何？」），少问是非题。</div>
+    <div class="btn-row">
+      <button class="btn primary" id="go">抽 牌</button>
+    </div>
+  </section>
+
+  <div id="result"></div>
+</div>
+
+<footer id="site-footer"></footer>
+<script src="../../assets/js/registry.js"></script>
+<script src="../../assets/js/core.js"></script>
+<script src="tarot-data.js"></script>
+<script src="tarot.js"></script>
+</body>
+</html>

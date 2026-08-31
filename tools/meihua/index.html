@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>梅花易数 — 使用 · 玄机</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-tool="meihua" data-page="use">
+<nav id="site-nav"></nav>
+
+<div class="wrap">
+  <div class="page-head">
+    <div class="crumb">XUANJI // 梅花易数</div>
+    <h1>梅花<b>易数</b></h1>
+    <div class="en">PLUM BLOSSOM · USE</div>
+  </div>
+  <div class="page-tabs" id="page-tabs"></div>
+
+  <section class="panel">
+    <h4>起卦方式</h4>
+    <div class="page-tabs" style="margin:8px 0 16px">
+      <a id="tab-time" class="on" style="cursor:pointer">时 间 起 卦</a>
+      <a id="tab-num" style="cursor:pointer">数 字 起 卦</a>
+    </div>
+
+    <div id="mode-time">
+      <div class="form-grid">
+        <div><label class="fl">年（地支）</label><select id="t-year"></select></div>
+        <div><label class="fl">月</label><select id="t-month"></select></div>
+        <div><label class="fl">日</label><select id="t-day"></select></div>
+        <div><label class="fl">时辰</label><select id="t-hour"></select></div>
+      </div>
+      <div class="note">默认取当前时间（公历月日近似，如按农历请自行调整）。</div>
+    </div>
+
+    <div id="mode-num" style="display:none">
+      <div class="form-grid">
+        <div><label class="fl">上卦数</label><input type="number" id="n-up" min="1" placeholder="任意正整数"></div>
+        <div><label class="fl">下卦数</label><input type="number" id="n-low" min="1" placeholder="任意正整数"></div>
+        <div><label class="fl">动爻数（可留空）</label><input type="number" id="n-mv" min="1" placeholder="留空=两数之和"></div>
+      </div>
+      <div class="note">随口两数、敲门声、字数笔画皆可为数——心中所感即数之源。</div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn primary" id="go">起 卦</button>
+      <button class="btn mag" id="rand">随机三数</button>
+    </div>
+  </section>
+
+  <div id="result"></div>
+</div>
+
+<footer id="site-footer"></footer>
+<script src="../../assets/js/registry.js"></script>
+<script src="../../assets/js/core.js"></script>
+<script src="meihua.js"></script>
+</body>
+</html>

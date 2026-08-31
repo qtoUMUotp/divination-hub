@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>掷筊 — 使用 · 玄机</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+<style>
+  .jiao-row { display:flex; gap:28px; justify-content:center; margin:26px 0 10px; }
+  .jiao {
+    width: 96px; height: 48px; margin: 0 auto;
+    background: linear-gradient(160deg, #d0342c, #8f1d17);
+    border: 1px solid rgba(255,120,110,.55);
+    box-shadow: 0 0 16px rgba(255,77,60,.35);
+    color: #ffe9e6; font: 700 17px/48px var(--mono, monospace);
+    text-align: center; user-select: none;
+    transition: border-radius .25s;
+  }
+  .jiao.yang { border-radius: 10px; height: 44px; line-height: 44px; }  /* 平面朝上 */
+  .jiao.yin  { border-radius: 96px 96px 10px 10px / 130px 130px 10px 10px; height: 52px; line-height: 60px; } /* 凸面朝上：月牙 */
+  .jiao.spin { animation: jiao-spin .65s ease-out; }
+  @keyframes jiao-spin {
+    0% { transform: rotate(0) translateY(0); }
+    40% { transform: rotate(540deg) translateY(-46px); }
+    100% { transform: rotate(1080deg) translateY(0); }
+  }
+  .jiao-label { text-align:center; color:var(--dim); font-size:12px; letter-spacing:2px; }
+</style>
+</head>
+<body data-tool="zhijiao" data-page="use">
+<nav id="site-nav"></nav>
+
+<div class="wrap">
+  <div class="page-head">
+    <div class="crumb">XUANJI // 掷筊</div>
+    <h1>掷<b>筊</b></h1>
+    <div class="en">JIAO DIVINATION · USE</div>
+  </div>
+  <div class="page-tabs" id="page-tabs"></div>
+
+  <section class="panel">
+    <h4>问事掷筊</h4>
+    <div class="note">心中默念一个<b>明确的是非题</b>（"此事可行否"），再掷。一阳一阴为圣筊（允），两阳为笑筊（未定），两阴为阴筊（不允）。</div>
+
+    <div class="jiao-row">
+      <div><div class="jiao" id="j1">筊</div><div class="jiao-label">筊一</div></div>
+      <div><div class="jiao" id="j2">筊</div><div class="jiao-label">筊二</div></div>
+    </div>
+
+    <div class="btn-row" style="justify-content:center">
+      <button class="btn primary" id="toss">掷 筊</button>
+      <button class="btn mag" id="reset">清 空 记 录</button>
+    </div>
+  </section>
+
+  <div id="result"></div>
+
+  <section class="panel">
+    <h4>连掷规则</h4>
+    <dl class="kv">
+      <dt>一掷</dt><dd>单次掷筊只作一次参考，主看所问之事当下之"气"。</dd>
+      <dt>连掷三圣</dt><dd>传统上，重要事情须<b>连掷三次圣筊</b>方为确据；中途得一阴筊或笑筊即需重新问起。</dd>
+      <dt>掷法</dt><dd>双手捧筊于胸前，默念所问，松手任其落地——心念越具体，筊象越有着落。</dd>
+    </dl>
+  </section>
+</div>
+
+<footer id="site-footer"></footer>
+<script src="../../assets/js/registry.js"></script>
+<script src="../../assets/js/core.js"></script>
+<script src="zhijiao.js"></script>
+</body>
+</html>

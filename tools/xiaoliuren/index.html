@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小六壬 — 使用 · 玄机</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-tool="xiaoliuren" data-page="use">
+<nav id="site-nav"></nav>
+
+<div class="wrap">
+  <div class="page-head">
+    <div class="crumb">XUANJI // 小六壬</div>
+    <h1>小六<b>壬</b></h1>
+    <div class="en">MA QIAN KE · USE</div>
+  </div>
+  <div class="page-tabs" id="page-tabs"></div>
+
+  <section class="panel">
+    <h4>起课</h4>
+    <div class="form-grid">
+      <div><label class="fl">月</label><select id="k-month"></select></div>
+      <div><label class="fl">日</label><select id="k-day"></select></div>
+      <div><label class="fl">时辰</label><select id="k-hour"></select></div>
+    </div>
+    <div class="note">农历月日为准（心记即可，公历近似亦可占）。以正月起大安、三月起速喜之序，月→日→时依次落宫。</div>
+    <div class="btn-row">
+      <button class="btn primary" id="go">起 课</button>
+      <button class="btn mag" id="now">用当前时间</button>
+    </div>
+  </section>
+
+  <div class="pal-grid" id="pal-grid"></div>
+  <div id="result"></div>
+</div>
+
+<footer id="site-footer"></footer>
+<script src="../../assets/js/registry.js"></script>
+<script src="../../assets/js/core.js"></script>
+<script src="xiaoliuren.js"></script>
+</body>
+</html>

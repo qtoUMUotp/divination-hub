@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>六爻 — 使用 · 玄机</title>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-tool="liuyao" data-page="use">
+<nav id="site-nav"></nav>
+
+<div class="wrap">
+  <div class="page-head">
+    <div class="crumb">XUANJI // 六爻</div>
+    <h1>六<b>爻</b></h1>
+    <div class="en">SIX LINES · USE</div>
+  </div>
+  <div class="page-tabs" id="page-tabs"></div>
+
+  <section class="panel">
+    <h4>日干 · 今日自动推算</h4>
+    <dl class="kv" id="rizhi"></dl>
+    <div class="note" id="gan-note">日干已按今日日期自动选定；若补排历史卦例或指定日期，可在下方手动改选。</div>
+  </section>
+
+  <section class="panel">
+    <h4>摇卦</h4>
+    <div class="form-grid" style="max-width:420px">
+      <div><label class="fl">日干（起六神用）</label>
+        <select id="gan">
+          <option value="甲">甲 / 乙日</option>
+          <option value="丙">丙 / 丁日</option>
+          <option value="戊">戊日</option>
+          <option value="己">己日</option>
+          <option value="庚">庚 / 辛日</option>
+          <option value="壬">壬 / 癸日</option>
+        </select>
+      </div>
+    </div>
+    <div class="note">三枚铜钱掷六次，自初爻至上爻。心念所问之事，<b style="color:var(--amber)">三背为老阳（重 ○）、三字为老阴（交 ×）</b>，皆动爻。</div>
+
+    <div class="coins" id="coins">
+      <div class="coin" id="c1">?</div>
+      <div class="coin" id="c2">?</div>
+      <div class="coin" id="c3">?</div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn primary" id="toss">掷 钱 一 次</button>
+      <button class="btn" id="auto">一 键 掷 成</button>
+      <button class="btn mag" id="reset">重 新 起 卦</button>
+    </div>
+  </section>
+
+  <div id="process"></div>
+  <div id="result"></div>
+
+  <section class="panel">
+    <h4>日干（日辰）说明 · 为什么重要</h4>
+    <dl class="kv">
+      <dt>是什么</dt><dd><b>日干</b>即摇卦当天的干支纪日之干（如丁丑日，日干为丁）。干支纪日以六十甲子逐日轮转，与万年历一致，本站按公历日期自动推算。</dd>
+      <dt>卦之主宰</dt><dd>六爻古法以<b>日辰为六爻之主宰</b>：爻逢日辰生扶则旺相有力，被日辰冲克则休囚无力。用神得日辰之生，事易成；忌神得日辰之助，阻力大。</dd>
+      <dt>暗动与旬空</dt><dd>静爻被日辰所冲为<b>暗动</b>（暗中生变）；爻之地支与当日旬空之支相同为<b>旬空</b>（暂时落空）。两者皆由日辰推得，是断应期与虚实的钥匙。</dd>
+      <dt>起六神</dt><dd>六神（六兽）按日干排布，自初爻起：<b>甲乙起青龙、丙丁起朱雀、戊日起勾陈、己日起腾蛇、庚辛起白虎、壬癸起玄武</b>，依次上行。青龙主喜，朱雀主口舌文书，勾陈主田土迟滞，腾蛇主怪异虚惊，白虎主凶伤疾病，玄武主暗昧盗失。</dd>
+      <dt>自动化方案</dt><dd>本页打开时自动读取设备当前日期 → 推算六十甲子日干支 → 自动选定对应日干并排好六神，<b>零输入</b>。摇卦结果中的六神即按此排列；手动改选日干后，下一次起卦按改选值重排。</dd>
+    </dl>
+  </section>
+</div>
+
+<footer id="site-footer"></footer>
+<script src="../../assets/js/registry.js"></script>
+<script src="../../assets/js/core.js"></script>
+<script src="liuyao.js"></script>
+</body>
+</html>
